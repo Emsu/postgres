@@ -39,8 +39,8 @@ RUN apt-get update \
 RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql
 
 ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
-ENV PGDATA /var/lib/postgresql/data
-VOLUME /var/lib/postgresql/data
+ENV PGDATA /data
+VOLUME /data
 
 COPY ./docker-entrypoint.sh /
 
